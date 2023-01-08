@@ -15,7 +15,7 @@ import WeatherForm from "./WeatherForm";
 import WeatherMainInfo from "./WeatherMainInfo";
 
 // api key
-const APIkey = '7fb93a306c1a7d20469ea9543eb19faf';
+const APIkey = "7fb93a306c1a7d20469ea9543eb19faf";
 console.log(APIkey);
 
 const App = () => {
@@ -117,6 +117,8 @@ const App = () => {
     case "Thunderstorm":
       icon = <IoMdThunderstorm />;
       break;
+    default:
+      icon = <BsCloudDrizzleFill className="text-[#31cafb]" />;
   }
 
   // date object

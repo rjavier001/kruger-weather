@@ -6,7 +6,7 @@ const WeatherForm = ({ handleInput, handleSubmit, animate }) => {
       className={`${
         animate ? "animate-shake" : "animate-none"
       } h-16 bg-black/30 w-full max-w-[450px]
-      rounded-full backdrop-blur-[32px] mb-8`}
+      rounded-full backdrop-blur-[32px] m-2`}
     >
       <div className="h-full relative flex items-center justify-between p-2">
         <input

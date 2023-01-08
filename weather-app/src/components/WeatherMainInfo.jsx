@@ -3,7 +3,7 @@ import { BsEye, BsWater, BsThermometer, BsWind } from "react-icons/bs";
 import { TbTemperatureCelsius } from "react-icons/tb";
 import { ImSpinner8 } from "react-icons/im";
 
-const WeatherMainInfo = ({ loading, data, date,icon }) => {
+const WeatherMainInfo = ({ loading, data, date, icon }) => {
   return (
     // <div >
     //   <div>{weather?.location?.name}</div>
@@ -30,7 +30,7 @@ const WeatherMainInfo = ({ loading, data, date,icon }) => {
     //     referrerpolicy="no-referrer-when-downgrade"
     //   ></iframe>
     // </div>
-    <div className="w-full max-w-[450px] bg-black/20 min-h-[584px] text-white backdrop-blur-[32px] rounded-[32px] py-12 px-6">
+    <div className="w-full max-w-[450px] bg-black/20 min-h-[480px] text-white backdrop-blur-[32px] rounded-[32px] py-6 px-2 m-2">
       {loading ? (
         <div className="w-full h-full flex justify-center items-center">
           <ImSpinner8 className="text-white text-5xl animate-spin" />
@@ -40,7 +40,7 @@ const WeatherMainInfo = ({ loading, data, date,icon }) => {
           {/* card top */}
           <div className="flex items-center gap-x-5">
             {/* icon */}
-            <div className="text-[87px]">{icon}</div>
+            <div className="text-[80px]">{icon}</div>
             <div>
               {/* country name */}
               <div className="text-2xl font-semibold">
@@ -54,10 +54,10 @@ const WeatherMainInfo = ({ loading, data, date,icon }) => {
             </div>
           </div>
           {/* card body */}
-          <div className="my-20">
+          <div className="my-0">
             <div className="flex justify-center items-center">
               {/* temp */}
-              <div className="text-[144px] leading-none font-light">
+              <div className="text-[100px] leading-none font-light">
                 {parseInt(data.main.temp)}
               </div>
               {/* celsius icon */}
@@ -117,6 +117,18 @@ const WeatherMainInfo = ({ loading, data, date,icon }) => {
                   Wind <span className="ml-2">{data.wind.speed} m/s</span>
                 </div>
               </div>
+            </div>
+            <div className="flex items-center gap-x-2">
+              <iframe
+                title="map"
+                src={`https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15057.534307180755!2d${data.coord.lon}5!3d${data.coord.lat}5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smx!4v1651103744472!5m2!1sen!2smx`}
+                width="100%"
+                height="350"
+                style={{ border: 0 }}
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
