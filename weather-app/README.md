@@ -2,7 +2,7 @@
 
 # Kruger Star
 
-- In this repository you can find My Portfolio.
+- In this repository you can find My Weather App.
 
 <img src='src/assets/img/mockup.png'>
 
@@ -17,7 +17,7 @@
 
 ## Getting Started
 
-**In this repository I will create my personal Portfolio with some of my projects.**
+**In this repository I will create my weather app whit RCA and Tailwind Css.**
 
 ## Run it
 
@@ -31,7 +31,7 @@ Use the following steps to run this Portfolio locally:
 
 - open the folder with a code editor (VS Code preferred)
 
-- go to the index.html file and open it with live server
+- use 'NPM Start'
 
 ### Deployment
 
